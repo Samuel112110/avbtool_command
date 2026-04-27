@@ -1,0 +1,14 @@
+python3 avbtool.py add_hashtree_footer \
+    --image super_system.img \
+    --partition_size 789798912 \
+    --rollback_index 0 \
+    --flags 3 \
+    --rollback_index_location 0 \
+    --internal_release_string "avbtool 1.3.0" \
+    --fec_num_roots 2 \
+    --hash_algorithm sha256 \
+    --partition_name system \
+    --salt bbe4d61aabbc5d8f9cebdb664e2fe934d622a41e342b276b639756367f9b43d6 \
+    --prop com.android.build.system.os_version:15 \
+    --prop com.android.build.system.fingerprint:DOOGEE/F1GC_EEA/F1GC:15/AP3A.240905.015.A2/20250726:user/release-keys \
+    --prop com.android.build.system.security_patch:2025-06-05
