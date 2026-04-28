@@ -1,0 +1,27 @@
+python3 avbtool.py make_vbmeta_image \
+    --output vbmeta-sign_no_verity.img \
+    --algorithm SHA256_RSA4096 \
+    --key keys/vbmeta/rsa4096_vbmeta.pem \
+    --flags 3 \
+    --rollback_index 0 \
+    --internal_release_string "avbtool 1.3.0" \
+    --chain_partition boot:1:keys/boot_benutzt/rsa4096_boot_pub.bin \
+    --chain_partition dtbo:6:keys/dtbo_benutzt/rsa4096_dtbo_pub.bin \
+    --chain_partition init_boot:8:keys/init_boot_benutzt/rsa4096_init_boot_pub.bin \
+    --chain_partition vbmeta_odm:7:keys/vbmeta_odm_benutzt/rsa4096_vbmeta_odm_pub.bin \
+    --chain_partition vbmeta_product:5:keys/vbmeta_product_benutzt/rsa4096_vbmeta_product_pub.bin \
+    --chain_partition vbmeta_system:2:keys/vbmeta_system_benutzt/rsa4096_vbmeta_system_pub.bin \
+    --chain_partition vbmeta_system_ext:3:keys/vbmeta_system_ext_benutzt/rsa4096_vbmeta_system_ext_pub.bin \
+    --chain_partition vbmeta_vendor:4:keys/vbmeta_vendor_benutzt/rsa4096_vbmeta_vendor_pub.bin \
+    --chain_partition vendor_boot:18:keys/vendor_boot_benutzt/rsa4096_vendor_boot_pub.bin \
+    --chain_partition l_modem:11:keys/l_modem_benutzt/rsa4096_l_modem_pub.bin \
+    --chain_partition l_ldsp:12:keys/l_ldsp_benutzt/rsa4096_l_ldsp_pub.bin \
+    --chain_partition l_gdsp:13:keys/l_gdsp_benutzt/rsa4096_l_gdsp_pub.bin \
+    --chain_partition pm_sys:14:keys/pm_sys_benutzt/rsa4096_pm_sys_pub.bin \
+    --chain_partition l_agdsp:15:keys/l_agdsp_benutzt/rsa4096_l_agdsp_pub.bin \
+    --prop com.android.build.boot.security_patch:2024-08-05 \
+    --prop com.android.build.boot.os_version:13 \
+    --prop com.android.build.system.os_version:13 \
+    --prop com.android.build.system.security_patch:2023-03-05 \
+    --prop com.android.build.vendor.os_version:13 \
+    --prop com.android.build.vendor.security_patch:2023-03-05
