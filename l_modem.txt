@@ -1,0 +1,12 @@
+python3 avbtool.py add_hash_footer \
+    --image SC9600_qogirl6_pubcp_modem.bin \
+    --partition_size 26214400 \
+    --key rsa4096_l_modem.pem \
+    --algorithm SHA256_RSA4096 \
+    --rollback_index 0 \
+    --flags 3 \
+    --rollback_index_location 0 \
+    --internal_release_string "avbtool 1.2.0" \
+    --hash_algorithm sha256 \
+    --partition_name l_modem \
+    --salt 95b4adf6addb726063df9f02d4db2cc8bf9e1a5b8e32d6c2b437ec7e140f993d
